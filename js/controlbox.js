@@ -194,6 +194,15 @@ define(['d3'], function() {
       })
     },
 
+    log: function(args) {
+      if (args.length > 1) {
+        return this.error("'git log' can take at most one argument in this tool")
+      }
+      var logs = this.historyView.log(args[0] || 'head')
+      logs = logs.replace(/\n/g, "<br>")
+      this.info(logs)
+    },
+
     rev_parse: function(args) {
       args.forEach(function(arg) {
         this.info(this.historyView.revparse(arg))
