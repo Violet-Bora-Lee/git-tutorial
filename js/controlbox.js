@@ -194,11 +194,10 @@ define(['d3'], function() {
       })
     },
 
-    log: function(args) {
-      if (args.length > 1) {
-        return this.error("'git log' can take at most one argument in this tool")
-      }
-      this.historyView.log(args)
+    rev_parse: function(args) {
+      args.forEach(function(arg) {
+        this.info(this.historyView.revparse(arg))
+      }, this)
     },
 
     cherry_pick: function (args) {
