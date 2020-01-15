@@ -29,7 +29,7 @@ define(['d3'], function () {
 
             input = cBoxContainer.append('input')
                 .attr('type', 'text')
-                .attr('placeholder', 'enter git command');
+                .attr('placeholder', 'git 명령어 입력');
 
             input.on('keyup', function () {
                 var e = d3.event;
