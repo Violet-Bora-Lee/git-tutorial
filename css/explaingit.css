@@ -259,3 +259,14 @@ g.head-tag > text {
 	font-weight: bold;
 	text-transform: uppercase;
 }
+
+#fork-me svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  color: #3f3f3f;
+  fill: #ea6f5a;
+  height: 80px;
+  width: 80px;
+}
