@@ -164,9 +164,9 @@ define(['d3'], function () {
         branch: function (args) {
             if (args.length < 1) {
                 this.info(
-                    'You need to give a branch name. ' +
-                    'Normally if you don\'t give a name, ' +
-                    'this command will list your local branches on the screen.'
+                    '브랜치 이름을 입력하세요. ' +
+                    '실제 환경에선 브랜치 이름을 입력하지 않고 ' +
+                    'git branch만 입력한 경우, 생성된 브랜치 목록을 보여 줍니다.'
                 );
 
                 return;

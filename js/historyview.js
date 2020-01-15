@@ -833,7 +833,7 @@ define(['d3'], function () {
 
         branch: function (name) {
             if (!name || name.trim() === '') {
-                throw new Error('You need to give a branch name.');
+                throw new Error('브랜치 이름을 입력하세요.');
             }
 
             if (name === 'HEAD') {
@@ -862,7 +862,7 @@ define(['d3'], function () {
                 commit;
 
             if (!name || name.trim() === '') {
-                throw new Error('You need to give a branch name.');
+                throw new Error('브랜치 이름을 입력하세요.');
             }
 
             if (name === this.currentBranch) {
