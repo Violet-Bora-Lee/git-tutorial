@@ -1,10 +1,6 @@
-﻿explain-git-with-d3
+﻿explain-git-with-d3-for-korean
 ===================
 
-Use D3 to visualize simple git branching operations.
+https://violet-bora-lee.github.io/explain-git-with-d3/는 git 브랜치와 관련된 다양한 명령어를 학습하기위해 만들어진 D3기반 사이트입니다.
 
-This simple project is designed to help people understand some basic git concepts visually.
-
-This is my first attempt at using both SVG and D3. I hope it is helpful to you.
-
-The page can be accessed via: http://onlywei.github.io/explain-git-with-d3/
+원본 저장소의 페이지는 http://onlywei.github.io/explain-git-with-d3/에서 확인할 수 있습니다.
