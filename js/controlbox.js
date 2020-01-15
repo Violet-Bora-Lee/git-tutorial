@@ -8,7 +8,7 @@ define(['d3'], function () {
     function ControlBox(config) {
         this.historyView = config.historyView;
         this.originView = config.originView;
-        this.initialMessage = config.initialMessage || 'Enter git commands below.';
+        this.initialMessage = config.initialMessage || '아래에 git 명령어를 입력해보세요.';
         this._commandHistory = [];
         this._currentCommand = -1;
         this._tempCommand = '';
