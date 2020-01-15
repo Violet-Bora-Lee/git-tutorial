@@ -1,6 +1,3 @@
-﻿explain-git-with-d3-for-korean
-===================
+﻿# git 튜토리얼
 
-https://violet-bora-lee.github.io/explain-git-with-d3/는 git 브랜치와 관련된 다양한 명령어를 학습하기위해 만들어진 D3기반 사이트입니다.
-
-원본 저장소의 페이지는 http://onlywei.github.io/explain-git-with-d3/에서 확인할 수 있습니다.
+[git 튜토리얼](https://violet-bora-lee.github.io/git-tutorial/)은 git 명령어를 입력 했을 때 어떤 변화가 생기는지 시각적으로 보여주면서 git을 학습할 수 있도록 만든 튜토리얼입니다.
