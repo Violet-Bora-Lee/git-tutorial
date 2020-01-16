@@ -101,21 +101,18 @@
     </div>
     <div id="ExplainGitCheckout-Container" class="twelvecol concept-container">
       <p>
-        <span class="cmd">git checkout</span> has many uses,
-        but the main one is to switch between branches.</br>
-        For example, to switch from master branch to dev branch,
-        I would type <span class="cmd">git checkout dev</span>.
-        After that, if I do a git commit, notice where it goes. Try it.
+        <span class="cmd">git checkout</span>은 다양한 상황에서 쓸 수 있는 명령어인데, 주로 브랜치 사이를 왔다 갔다 할 때
+        사용합니다.</br> <span class="cmd">git checkout dev</span>을 입력하면 master 브랜치에서 dev 브랜치로 이동할 수
+        있죠. 직접 명령어를 입력해 dev 브랜치로 이동한 후, commit을 하나 만들어 어떤 일이 일어나는지 살펴봅시다.
       </p>
       <p>
-        In addition to checking out branches, you can also checkout individual commits. Try it.</br>
-        Make a new commit and then type <span class="cmd">git checkout bb92e0e</span>
-        and see what happens.
+        브랜치를 체크아웃 할 수도 있지만, 개별 커밋을 체크아웃하는 것도 가능합니다. 실제로 해봅시다.</br>
+        새로운 커밋을 몇 개 만든 후 <span class="cmd">git checkout bb92e0e</span>을 입력해 ID가 bb92e0e인 커밋을
+        체크아웃하고 무슨 일이 일어나는지 살펴봅시다.
       </p>
       <p>
-        Type <span class="cmd">git commit</span>, <span class="cmd">git branch</span>,
-        and <span class="cmd">git checkout</span> commands to your hearts desire
-        until you understand this concept.
+        <span class="cmd">git commit</span>, <span class="cmd">git branch</span>, <span class="cmd">git checkout</span>을
+        여러 번 번갈아 입력하면서 세 명령어가 익숙해질 때까지 자유롭게 실습해보세요.
       </p>
       <div class="playground-container"></div>
     </div>
@@ -335,7 +332,7 @@ require(['explaingit'], function (explainGit) {
                 {id: 'e088135', parent: 'e137e9b', tags: ['dev']}
             ],
             initialMessage:
-                'Use git checkout, git branch, and git commit commands until you understand.'
+                'git checkout, git branch, git commit을 자유롭게 입력해보세요.'
         },
         'checkout-b': {
             name: 'Checkout-b',
