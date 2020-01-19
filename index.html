@@ -118,9 +118,11 @@
     </div>
     <div id="ExplainGitCheckout-b-Container" class="twelvecol concept-container">
       <p>
-        You can combine <span class="cmd">git branch</span> and <span class="cmd">git checkout</span>
-        into a single command by typing <span class="cmd">git checkout -b branchname</span>.
-        This will create the branch if it does not already exist and immediately check it out.
+        <span class="cmd">git checkout -b name</span>은 <span class="cmd">git branch name</span>과
+        <span class="cmd">git checkout name</span>을 하나로 합친 명령어입니다.
+        <span class="cmd">name</span>이라는 브랜치가 생성되어이있지 않다는 가정하에,
+        <span class="cmd">git checkout -b name</span>을 입력하면 <span class="cmd">name</span>이라는 브랜치가 만들어지면서
+        동시에 해당 브랜치를 체크아웃하게 됩니다.
       </p>
       <div class="playground-container"></div>
     </div>
@@ -344,7 +346,7 @@ require(['explaingit'], function (explainGit) {
                 {id: 'e088135', parent: 'e137e9b', tags: ['dev']}
             ],
             initialMessage:
-                'Use git checkout -b and git commit commands until you understand.'
+                'git checkout -b와 git commit을 자유롭게 입력해보세요.'
         },
         'reset': {
             name: 'Reset',
