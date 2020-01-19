@@ -1195,11 +1195,11 @@ define(['d3'], function() {
       }
 
       if (name === 'HEAD') {
-        throw new Error('You cannot name your branch "HEAD".');
+        throw new Error('HEAD는 브랜치 이름으로 사용할 수 없습니다.');
       }
 
       if (this.branches.indexOf(name) > -1) {
-        throw new Error('Branch "' + name + '" already exists.');
+        throw new Error('이미 존재하는 브랜치입니다.');
       }
 
       var startPoint = this.getCommit(startCommit || 'head')
