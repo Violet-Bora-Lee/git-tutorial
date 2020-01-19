@@ -215,7 +215,7 @@ function(_yargs) {
     },
 
     error: function(msg) {
-      msg = msg || 'I don\'t understand that.';
+      msg = msg || '알 수 없는 명령어입니다.';
       this.terminalOutput.append('div').classed('error', true).html(msg);
       this._scrollToBottom();
     },
