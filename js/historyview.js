@@ -521,7 +521,7 @@ define(['d3'], function() {
       } else {
         svg.append('svg:text')
           .classed('remote-name-display', true)
-          .text('로컬 리포지토리')
+          .text('local 리포지토리')
           .attr('x', 10)
           .attr('y', 25);
 
