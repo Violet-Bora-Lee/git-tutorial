@@ -16,3 +16,6 @@
 
 ## git reset
 ![git reset](images/gitreset.png)
+
+## git revert
+![git revert](images/gitrevert.png)
