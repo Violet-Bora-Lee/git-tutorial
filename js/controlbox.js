@@ -406,16 +406,16 @@ function(_yargs) {
         switch (arg) {
           case '--soft':
             this.info(
-              'The "--soft" flag works in real git, but ' +
-              'I am unable to show you how it works in this demo. ' +
-              'So I am just going to show you what "--hard" looks like instead.'
+              '실제 환경에선 --soft 플래그를 붙여서 사용할 수 있는데,' +
+              '이를 시각화 할 수 있는 방법이 없기 때문에 본 튜토리얼에선 ' +
+              '--hard 플래그를 붙여서 reset을 실행했다고 가정하고 그 결과를 보여줍니다.'
             );
             break;
           case '--mixed':
             this.info(
-              'The "--mixed" flag works in real git, but ' +
-              'I am unable to show you how it works in this demo. ' +
-              'So I am just going to show you what "--hard" looks like instead.'
+              '실제 환경에선 --soft 플래그를 붙여서 사용할 수 있는데,' +
+              '이를 시각화 할 수 있는 방법이 없기 때문에 본 튜토리얼에선 ' +
+              '--hard 플래그를 붙여서 reset을 실행했다고 가정하고 그 결과를 보여줍니다.'
             );
             break;
           case '--hard':
@@ -425,7 +425,7 @@ function(_yargs) {
           default:
             var remainingArgs = [arg].concat(args);
             args.length = 0;
-            this.info('Assuming "--hard".');
+            this.info('(--hard를 붙여서 실행했다고 가정)');
             this.doReset(remainingArgs.join(' '));
         }
       }

@@ -128,25 +128,23 @@
     </div>
     <div id="ExplainGitReset-Container" class="twelvecol concept-container">
       <p>
-        <span class="cmd">git reset</span> will move HEAD and the current branch back to wherever
-        you specify, abandoning any commits that may be left behind. This is useful to undo a commit
-        that you no longer need.
+        <span class="cmd">git reset</span>을 사용하면 현재 체크아웃한 브랜치의 원하는 과거 커밋으로 HEAD를 이동시키고,
+          그 이후의 커밋들은 모두 버릴 수 있습니다. 원치 않는 커밋을 되돌릴 때 유용한 명령어 입니다.
       </p>
       <p>
-        This command is normally used with one of three flags: "--soft", "--mixed", and "--hard".
-        The soft and mixed flags deal with what to do with the work that was inside the commit after
-        you reset, and you can read about it <a href="http://git-scm.com/2011/07/11/reset.html">here</a>.
-        Since this visualization cannot graphically display that work, only the "--hard" flag will work
-        on this site.
+        reset 명령어는 보통 '--soft', '--mixed', '--hard' 플래그(flag) 중 하나를 붙여서 사용합니다.
+        soft와 mixed 플래그는 reset으로 되돌린 커밋에 있는 내용을 가지고 무언가를 다시 하고 싶을 때 주로 사용합니다.
+        자세한 내용은 <a href="https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Reset-%EB%AA%85%ED%99%95%ED%9E%88-%EC%95%8C%EA%B3%A0-%EA%B0%80%EA%B8%B0#_git_reset">링크</a>
+        에서 확인해 보시기 바랍니다. 두 플래그는 시각적으로 표현할 수 없기 때문에 본 튜토리얼에선 'hard' 플래그만 사용하겠습니다.
       </p>
       <p>
-        The ref "HEAD^" is usually used together with this command. "HEAD^" means "the commit right
-        before HEAD. "HEAD^^" means "two commits before HEAD", and so on.
+        reset은 'HEAD^'와 함께 사용할 때가 많습니다. HEAD^는 'HEAD 바로 앞의 커밋'을 의미합니다.
+        HEAD^^는 'HEAD 앞의 커밋 두 개'를 의미합니다. ^는 원하는 만큼 붙여서 사용할 수 있습니다.
       </p>
       <p>
-        Note that you must <b>never</b> use <span class="cmd">git reset</span> to abandon commits
-        that have already been pushed and merged into the origin. This can cause your local repository
-        to become out of sync with the origin. Don't do it unless you really know what you're doing.
+        리모트 리포지토리에 이미 푸시했거나 머지된 커밋은 절대 <span class="cmd">git reset</span>을 사용해서 버리면 안 됩니다.
+        이렇게 하면 로컬 리포지토리와 리모트 리포지토리의 싱크가 맞지 않기 때문입니다. reset, push 등에 대해 정확히 알기 전까지
+        reset을 함부로 사용하지 마세요!
       </p>
       <div class="playground-container"></div>
     </div>
@@ -355,9 +353,11 @@ require(['explaingit'], function (explainGit) {
             commitData: [
                 {id: 'e137e9b'},
                 {id: '0e70093', parent: 'e137e9b'},
-                {id: '3e33afd', parent: '0e70093', tags: ['master']}
+                {id: 'bb92e0e', parent: '0e70093'},
+                {id: 'e088135', parent: 'bb92e0e'},
+                {id: '3e33afd', parent: 'e088135', tags: ['master']}
             ],
-            initialMessage: 'Type "git reset HEAD^".'
+            initialMessage: 'git reset HEAD^를 입력해보세요.'
         },
         'revert': {
             name: 'Revert',
