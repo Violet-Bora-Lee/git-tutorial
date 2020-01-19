@@ -441,7 +441,7 @@ function(_yargs) {
       })
 
       if (!opt._.length) {
-        this.error('You must specify a commit to revert');
+        this.error('되돌릴 커밋을 명시해주세요.');
         return
       }
 

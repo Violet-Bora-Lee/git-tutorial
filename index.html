@@ -150,12 +150,12 @@
     </div>
     <div id="ExplainGitRevert-Container" class="twelvecol concept-container">
       <p>
-        To undo commits that have already been pushed and shared with the team, we cannot use the
-        <span class="cmd">git reset</span> command. Instead, we have to use <span class="cmd">git revert</span>.
+        이미 push되어서 팀원간에 공유되고 있는 커밋을 되돌릴 땐 <span class="cmd">git reset</span>을 사용할 수 없습니다.
+        대신 <span class="cmd">git revert</span>를 사용해야 합니다.
       </p>
       <p>
-        <span class="cmd">git revert</span> will create a new commit that will undo all of the work that
-        was done in the commit you want to revert.
+        <span class="cmd">git revert</span>를 입력하면 되돌리려고 하는 커밋 안에 있는 작업을 삭제해주는 새로운 커밋이
+        만들어집니다.
       </p>
       <div class="playground-container"></div>
     </div>
@@ -366,9 +366,10 @@ require(['explaingit'], function (explainGit) {
             commitData: [
                 {id: 'e137e9b'},
                 {id: '0e70093', parent: 'e137e9b'},
-                {id: '3e33afd', parent: '0e70093', tags: ['master']}
+                {id: '3e33afd', parent: '0e70093'},
+                {id: 'e088135', parent: '3e33afd', tags: ['master']}
             ],
-            initialMessage: 'Type "git revert 0e70093".'
+            initialMessage: 'git revert 0e70093를 입력해보세요.'
         },
         'merge': {
             name: 'Merge',
