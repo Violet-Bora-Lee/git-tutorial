@@ -132,14 +132,15 @@
           그 이후의 커밋들은 모두 버릴 수 있습니다. 원치 않는 커밋을 되돌릴 때 유용한 명령어 입니다.
       </p>
       <p>
-        reset 명령어는 보통 '--soft', '--mixed', '--hard' 플래그(flag) 중 하나를 붙여서 사용합니다.
-        soft와 mixed 플래그는 reset으로 되돌린 커밋에 있는 내용을 가지고 무언가를 다시 하고 싶을 때 주로 사용합니다.
-        자세한 내용은 <a href="https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Reset-%EB%AA%85%ED%99%95%ED%9E%88-%EC%95%8C%EA%B3%A0-%EA%B0%80%EA%B8%B0#_git_reset">링크</a>
-        에서 확인해 보시기 바랍니다. 두 플래그는 시각적으로 표현할 수 없기 때문에 본 튜토리얼에선 'hard' 플래그만 사용하겠습니다.
+        reset 명령어는 보통 <span class="cmd">--soft</span>, <span class="cmd">--mixed</span>, <span class="cmd">--hard</span>
+        플래그(flag) 중 하나를 붙여서 사용합니다. soft와 mixed 플래그는 reset으로 되돌린 커밋에 있는 내용을 가지고 무언가를
+        다시 하고 싶을 때 주로 사용합니다. 자세한 내용은
+        <a href="https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Reset-%EB%AA%85%ED%99%95%ED%9E%88-%EC%95%8C%EA%B3%A0-%EA%B0%80%EA%B8%B0#_git_reset">링크</a>
+        에서 확인해 보시기 바랍니다. 두 플래그는 시각적으로 표현할 수 없기 때문에 본 튜토리얼에선 hard 플래그만 사용하겠습니다.
       </p>
       <p>
-        reset은 'HEAD^'와 함께 사용할 때가 많습니다. HEAD^는 'HEAD 바로 앞의 커밋'을 의미합니다.
-        HEAD^^는 'HEAD 앞의 커밋 두 개'를 의미합니다. ^는 원하는 만큼 붙여서 사용할 수 있습니다.
+        reset은 <span class="cmd">HEAD^</span>와 함께 사용할 때가 많습니다. HEAD^는 'HEAD 바로 앞의 커밋'을 의미합니다.
+        <span class="cmd">HEAD^^</span>는 'HEAD 앞의 커밋 두 개'를 의미합니다. ^는 원하는 만큼 붙여서 사용할 수 있습니다.
       </p>
       <p>
         remote 리포지토리에 이미 푸시했거나 머지된 커밋은 절대 <span class="cmd">git reset</span>을 사용해서 버리면 안 됩니다.
