@@ -485,7 +485,7 @@ function(_yargs) {
         result = this.historyView.merge(branch, noFF);
 
         if (result === 'Fast-Forward') {
-          this.info('You have performed a fast-forward merge.');
+          this.info('fast-forward로 머지하였습니다.');
         }
       }, function(before, after) {
         var reflogMsg = "merge " + branch + ": "

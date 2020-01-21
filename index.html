@@ -162,12 +162,12 @@
     </div>
     <div id="ExplainGitMerge-Container" class="twelvecol concept-container">
       <p>
-        <span class="cmd">git merge</span> will create a new commit with two parents. The resulting
-        commit snapshot will have the all of the work that has been done in both branches.
+        <span class="cmd">git merge</span>를 사용하면 두 개의 부모 커밋을 가지는 새로운 커밋이 하나 만들어집니다.
+        이 커밋에는 두 브랜치에서 했던 작업의 스냅숏이 포함됩니다.
       </p>
       <p>
-        If there was no divergence between the two commits, git will do a "fast-forward" method merge.</br>
-        To see this happen, checkout the 'ff' branch and then type <span class="cmd">git merge dev</span>.
+        합치려는 두 개의 브랜치에 분기가 없었다면 'fast-forward' 전략을 사용해 머지합니다.</br>
+        ff 브랜치를 체크아웃하고 <span class="cmd">git merge dev</span>를 입력해 직접 확인해봅시다.
       </p>
       <div class="playground-container"></div>
     </div>
@@ -382,7 +382,7 @@ require(['explaingit'], function (explainGit) {
                 {id: 'e088135', parent: 'f5b32c8', tags: ['dev']}
             ],
             initialMessage:
-                'Type "git merge dev".'
+                'git merge dev를 입력해보세요.'
         },
         'rebase': {
             name: 'Rebase',
