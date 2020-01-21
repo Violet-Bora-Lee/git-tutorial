@@ -173,16 +173,16 @@
     </div>
     <div id="ExplainGitRebase-Container" class="twelvecol concept-container">
       <p>
-        <span class="cmd">git rebase</span> will take the commits on this branch and "move" them so that their
-        new "base" is at the point you specify.
+        <span class="cmd">git rebase</span>를 사용하면 현재 체크아웃한 브랜치의 커밋들이 '베이스(기준)' 역할을 하는 브랜치
+        끝으로 '이동'합니다. <span class="cmd">dev</span> 브랜치를 체크아웃한 후, <span class="cmd">git rebase master</span>를
+        입력해 직접 확인해봅시다.
       </p>
       <p>
-        You should pay close attention to the commit IDs of the circles as they move when you do this exercise.
+        rebase를 사용할 때는 커밋 ID가 변한다는 점에 주의하셔야 합니다.
       </p>
       <p>
-        The reason I put "move" in quotations because this process actually generates brand new commits with
-        completely different IDs than the old commits, and leaves the old commits where they were. For this reason,
-        you never want to rebase commits that have already been shared with the team you are working with.
+        rebase를 하면 기존 커밋과 동일한 내용을 담은 '새로운 커밋'들이 '이동'하고, 기존 커밋들은
+        그 자리에 남아있습니다. 따라서 다른 사람에게 공유된 커밋이 들어있는 브랜치를 rebase하면 안됩니다.
       </p>
       <div class="playground-container"></div>
     </div>
@@ -393,9 +393,8 @@ require(['explaingit'], function (explainGit) {
                 {id: 'f5b32c8', parent: 'e137e9b'},
                 {id: 'e088135', parent: 'f5b32c8', tags: ['dev']}
             ],
-            currentBranch: 'dev',
             initialMessage:
-                'Type "git rebase master".'
+                'git rebase master를 입력해보세요.'
         },
         'fetch': {
             name: 'Fetch',
