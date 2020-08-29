@@ -178,7 +178,8 @@
         입력해 직접 확인해봅시다.
       </p>
       <p>
-        rebase를 사용할 때는 커밋 ID가 변한다는 점에 주의하셔야 합니다.
+        rebase를 사용할 때는 커밋 ID가 변한다는 점에 주의하셔야 합니다. rebase와 merge는 여러 브랜치를 하나로 합쳐준다는 공통점을 가지고 있지만, rebase는 하나의 직선적인 연결을
+        만들어주기 때문에 협업시 log와 브랜치의 구조를 이해하기 쉬워집니다.
       </p>
       <p>
         rebase를 하면 기존 커밋과 동일한 내용을 담은 '새로운 커밋'들이 '이동'하고, 기존 커밋들은
@@ -188,33 +189,36 @@
     </div>
     <div id="ExplainGitFetch-Container" class="twelvecol concept-container">
       <p>
-        <span class="cmd">git fetch</span> will update all of the "remote tracking branches" in your local repository.
-        Remote tracking branches are tagged in grey.
+        <span class="cmd">git fetch</span> "remote tracking branches" 가 로컬 저장소로 불러와집니다. 
+        <p>자세히 표현하면, 리모트 서버에 연결한 후, 추가 된 사항이 있다면 저장소를 동기화하고 리모트 서버의 브랜치를 가리키는 포인터를 갱신합니다. 가리키고 있던 포인터가 없는 경우, 새롭게 만듭니다.</p>
+        <p>불러온 브랜치는 회색으로 표시됩니다. 이때, 내 로컬에 반영하고 싶다면 <span class="cmd">git merge</span> 명령어를 사용합니다.</p>
+        
       </p>
       <div class="playground-container"></div>
     </div>
     <div id="ExplainGitPull-Container" class="twelvecol concept-container">
       <p>
-        A <span class="cmd">git pull</span> is a two step process that first does a <span class="cmd">git fetch</span>,
-        and then does a <span class="cmd">git merge</span> of the remote tracking branch associated with your current branch.
-        If you have no current branch, the process will stop after fetching.
+        A <span class="cmd">git pull</span> 은<span class="cmd">git fetch</span>,
+        와 <span class="cmd">git merge</span>의 두 가지 기능을 한 번에 수행합니다. 이때, 만약에 pull 하려 하는 current 브랜치가 존재하지 않으면 (git checkout -b를 이용하여 새로운
+        브랜치를 만들고, 그 브랜치로 계속 커밋을 한 후에 master 브랜치를 pull 을 하는 경우) fetch 까지 진행하고, 멈춥니다.
       </p>
       <p>
-        If the argument "--rebase" was given by typing <span class="cmd">git pull --rebase</span>, the second step of
-        pull process will be a rebase instead of a merge. This can be set to the default behavior by configuration by typing:
-        <span class="cmd">git config branch.BRANCHNAME.rebase true</span>.
+        만약 "--rebase"를 추가하여 입력하면 <span class="cmd">git pull --rebase</span>, 
+        merge 대신에 rebase가 됩니다. merge와 rebase의 차이점은 rebase 문서를 참고하세요.
+        <span class="cmd">git config branch.BRANCHNAME.rebase true</span> 명령을 입력하면, 기본값을 rebase로 설정할 수 있습니다.
       </p>
       <div class="playground-container"></div>
     </div>
     <div id="ExplainGitPush-Container" class="twelvecol concept-container">
       <p>
-        A <span class="cmd">git push</span> will find the commits you have on your local branch that the corresponding branch
-        on the origin server does not have, and send them to the remote repository.
+        <span class="cmd">git push</span> 명령어는 당신의 로컬 브랜치에 새롭게 추가 된 커밋을 리모트 브랜치에 갱신합니다.
       </p>
-      <p>
-        By default, all pushes must cause a fast-forward merge on the remote repository. If there is any divergence between
-        your local branch and the remote branch, your push will be rejected. In this scenario, you need to pull first and then
-        you will be able to push again.
+      <p>기본적으로, 모든 push 명령은 직선적인 커밋의 통합이라고 생각할 수 있습니다(Fast-forwad merge).
+        따라서 당신의 로컬 브랜치와 리모트 브랜치 간의 차이가 있다면 (아래와 같이) push가 불가능하게 됩니다.</p>
+         
+        <p>예를 들어 아래와 같은 상황에서는, 리모트 브랜치에게 우리에게는 없는 커밋(7eb7654)이 존재하고 어떤 것이 맞는 지 모르므로 push 할 수 없습니다. 따라서,
+          pull 명령어를 사용하여 리모트 브랜치에 있는 커밋을 전부 로컬 브랜치에 갱신하여 차이를 없애고 나면 push 할 수 있게 됩니다.</p> 
+        .
       </p>
       <div class="playground-container"></div>
     </div>
