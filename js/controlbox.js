@@ -599,7 +599,7 @@ function(_yargs) {
         throw new Error('Current branch is not set up for pulling.');
       }
 
-      this.lock()
+      //this.lock()
       setTimeout(function() {
         try {
           if (args[0] === '--rebase' || control.rebaseConfig[currentBranch] === 'true') {
